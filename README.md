@@ -42,6 +42,7 @@ to decide.
 ---
 
 ## How It Works
+
 Resume PDF uploaded
 └── extract_candidate     LLM extracts structured profile from raw text
 └── match_resume          LLM scores candidate 0-100 against JD
@@ -51,6 +52,7 @@ Resume PDF uploaded
 │                            ├── score ≥ 75%  →  schedule_interview   12 slots, 2 weeks
 │                            └── score < 75%  →  human_review_queue
 └── score < 65%  →  human_review_queue   HM approves or rejects manually
+
 ---
 
 ## Why This Works on Top of Oracle and SAP
@@ -70,6 +72,7 @@ No UI changes.
 ---
 
 ## Project Structure
+
 hcm-agent-platform/
 │
 ├── agents/                         # LangGraph agent definitions
@@ -117,6 +120,7 @@ hcm-agent-platform/
 ├── .env.example                    # Template — copy to .env and add your keys
 ├── .gitignore
 └── README.md
+
 ---
 
 ## Roles in Seed Data
