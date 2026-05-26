@@ -89,6 +89,7 @@ No UI changes.
 
 ## Project Structure
 
+```text
 hcm-agent-platform/
 │
 ├── agents/                         # LangGraph agent definitions
@@ -97,7 +98,7 @@ hcm-agent-platform/
 │       ├── nodes.py                # All agent step functions
 │       ├── prompts.py              # All LLM prompts, centralised
 │       ├── state.py                # TypedDict state passed between nodes
-│       └── init.py
+│       └── __init__.py
 │
 ├── connectors/                     # ERP adapter layer
 │   ├── base.py                     # BaseERPConnector interface (the contract)
@@ -105,11 +106,11 @@ hcm-agent-platform/
 │   ├── mock_erp/                   # In-memory mock with Oracle HCM data shape
 │   │   ├── client.py               # MockERPClient — implements BaseERPConnector
 │   │   ├── seed_data.py            # 3 realistic job requisitions
-│   │   └── init.py
+│   │   └── __init__.py
 │   ├── oracle_hcm/                 # Real Oracle HCM connector (stub)
 │   │   ├── client.py               # OracleHCMClient — fill in when you have access
-│   │   └── init.py
-│   └── init.py
+│   │   └── __init__.py
+│   └── __init__.py
 │
 ├── core/                           # Shared logic used across all agents
 │   ├── models.py                   # Pydantic models — Candidate, JobRequisition,
@@ -117,7 +118,7 @@ hcm-agent-platform/
 │   │                               # InterviewSlot, ApplicationRecord
 │   ├── llm.py                      # Model-agnostic LLM client with retry logic
 │   ├── resume_parser.py            # PDF text extraction (pdfplumber + pymupdf)
-│   └── init.py
+│   └── __init__.py
 │
 ├── ui/                             # Streamlit interface
 │   ├── session.py                  # Session state helpers shared across pages
@@ -125,17 +126,18 @@ hcm-agent-platform/
 │       ├── upload.py               # Resume upload + live pipeline runner
 │       ├── review_queue.py         # HM review queue for below-threshold candidates
 │       ├── tracker.py              # Application pipeline tracker
-│       └── init.py
+│       └── __init__.py
 │
 ├── config/
 │   ├── settings.py                 # All settings loaded from .env via pydantic-settings
-│   └── init.py
+│   └── __init__.py
 │
 ├── app.py                          # Streamlit entry point and navigation
 ├── requirements.txt
 ├── .env.example                    # Template — copy to .env and add your keys
 ├── .gitignore
 └── README.md
+```
 
 ---
 
