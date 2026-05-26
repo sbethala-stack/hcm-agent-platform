@@ -43,6 +43,23 @@ to decide.
 
 ## How It Works
 
+oracle-hcm-recruiting-rag/
+│
+├── data/
+│   ├── oracle_hcm_recruiting_rag_chunks.json         # Implementing Recruiting — 1,123 chunks
+│   ├── oracle_hcm_recruiting_rag.md                  # Implementing Recruiting — full markdown
+│   ├── oracle_hcm_using_recruiting_rag_chunks.json   # Using Recruiting — 412 chunks
+│   └── oracle_hcm_using_recruiting_rag.md            # Using Recruiting — full markdown
+│
+├── src/
+│   ├── ingest.py        # Loads both guides into ChromaDB vector database
+│   └── app.py           # Streamlit chat interface
+│
+├── .env                 # Your OpenAI API key (never committed to GitHub)
+├── .gitignore
+├── requirements.txt
+└── README.md
+
 Resume PDF uploaded
 └── extract_candidate     LLM extracts structured profile from raw text
 └── match_resume          LLM scores candidate 0-100 against JD
